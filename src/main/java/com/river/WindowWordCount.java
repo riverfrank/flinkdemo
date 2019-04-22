@@ -16,16 +16,18 @@ public class WindowWordCount {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        DataStream<Tuple2<String, Integer>> dataStream = env
-                .socketTextStream("192.168.130.31", 9999)
-                .flatMap(new Splitter())
-                .keyBy(0)
-                .timeWindow(Time.seconds(5))
-                .sum(1);
+        env.generateSequence(1,5).print();
+        env.execute();
+//        DataStream<Tuple2<String, Integer>> dataStream = env
+//                .socketTextStream("192.168.130.31", 9999)
+//                .flatMap(new Splitter())
+//                .keyBy(0)
+//                .timeWindow(Time.seconds(5))
+//                .sum(1);
+//
+//        dataStream.print();
 
-        dataStream.print();
-
-        env.execute("Window WordCount");
+ //       env.execute("Window WordCount");
     }
 
     public static class Splitter implements FlatMapFunction<String, Tuple2<String, Integer>> {

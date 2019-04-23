@@ -12,7 +12,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring.version>2.0.5.RELEASE</spring.version>
-        <flink.version>1.6.0</flink.version>
+        <flink.version>1.8.0</flink.version>
     </properties>
     <dependencies>
         <!-- Start Flink -->

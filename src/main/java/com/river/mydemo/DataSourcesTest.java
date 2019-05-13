@@ -1,4 +1,4 @@
-package com.river.streaming;
+package com.river.mydemo;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.flink.api.java.tuple.Tuple2;

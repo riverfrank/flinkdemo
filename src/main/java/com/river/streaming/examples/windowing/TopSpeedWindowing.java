@@ -38,9 +38,8 @@ public class TopSpeedWindowing {
         } else {
             System.out.println("Executing TopSpeedWindowing example with default input data set.");
             System.out.println("Use --input to specify file input.");
-            carData = env.addSource(CarSource.create(2));
+            carData = env.addSource(CarSource.create(1));
         }
-
         int evictionSec = 10;
         double triggerMeters = 50;
         DataStream<Tuple4<Integer, Integer, Double, Long>> topSpeeds = carData
@@ -100,7 +99,7 @@ public class TopSpeedWindowing {
         public void run(SourceContext<Tuple4<Integer, Integer, Double, Long>> ctx) throws Exception {
 
             while (isRunning) {
-                Thread.sleep(100);
+                Thread.sleep(1000);
                 for (int carId = 0; carId < speeds.length; carId++) {
                     if (rand.nextBoolean()) {
                         speeds[carId] = Math.min(100, speeds[carId] + 5);

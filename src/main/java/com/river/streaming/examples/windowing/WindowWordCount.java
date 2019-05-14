@@ -1,7 +1,7 @@
 package com.river.streaming.examples.windowing;
 
-import com.river.streaming.example.wordcount.WordCount;
-import com.river.streaming.example.wordcount.WordCountData;
+import com.river.streaming.examples.wordcount.WordCount;
+import com.river.streaming.examples.wordcount.WordCountData;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.streaming.api.datastream.DataStream;

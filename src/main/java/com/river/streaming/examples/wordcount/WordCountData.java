@@ -1,4 +1,4 @@
-package com.river.streaming.example.wordcount;
+package com.river.streaming.examples.wordcount;
 
 /**
  * @author river

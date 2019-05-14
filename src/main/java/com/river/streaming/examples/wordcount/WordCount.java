@@ -1,4 +1,4 @@
-package com.river.streaming.example.wordcount;
+package com.river.streaming.examples.wordcount;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.tuple.Tuple2;
@@ -41,8 +41,10 @@ public class WordCount {
 
                         // group by the tuple field "0" and sum up tuple field "1"
                         .keyBy(0)
-                       // .countWindowAll(10)
+                        .countWindowAll(50)
+
                         .sum(1);
+
 
         // emit result
         if (params.has("output")) {

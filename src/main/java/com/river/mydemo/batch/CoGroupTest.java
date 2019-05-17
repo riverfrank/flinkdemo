@@ -1,7 +1,6 @@
 package com.river.mydemo.batch;
 
 import com.google.gson.Gson;
-import lombok.val;
 import org.apache.flink.api.common.functions.CoGroupFunction;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
@@ -20,13 +19,13 @@ public class CoGroupTest {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         DataSet<Tuple2<String, Integer>> iVals = env.fromElements(
                 new Tuple2<String, Integer>("river", 30),
-                new Tuple2<String, Integer>("lucy", 20),
-                new Tuple2<String, Integer>("frank", 33),
+                //new Tuple2<String, Integer>("lucy", 20),
+               // new Tuple2<String, Integer>("frank", 33),
                 new Tuple2<String, Integer>("cat", 5));
 
         DataSet<Tuple2<String, Double>> dVals = env.fromElements(
                 new Tuple2<String, Double>("river", 1d),
-                new Tuple2<String, Double>("lucy", 1d),
+                //new Tuple2<String, Double>("lucy", 1d),
                 new Tuple2<String, Double>("lucy", 1d),
                 new Tuple2<String, Double>("frank", 1d),
                 new Tuple2<String, Double>("cat", 1d));
